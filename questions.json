@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "question": "What year was the film The Terminator released?",
+      "options": ["1982", "1983", "1984", "1985"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 2 + 2?",
+      "options": ["1", "2", "3", "4"],
+      "correctAnswer": 3
+    }
+  ]
+}
