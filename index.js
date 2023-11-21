@@ -29,9 +29,9 @@ function displayQuestion() {
     });
 }
 
-function checkAnswer(userAnswer) {
+function checkAnswer(userIndexAnswer) {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-    if (userAnswer === correctAnswer) {
+    if (userIndexAnswer === correctAnswer) {
         resultElement.innerText = 'Correct!';
         createConfetti();
     } else {
@@ -45,7 +45,7 @@ function nextQuestion() {
         displayQuestion();
         resultElement.innerText = '';
     } else {
-        // Show final score or submit the answers to a server
+        // Show final score
         resultElement.innerText = 'Quiz completed!';
         nextButton.style.display = 'none';
         optionsElement.innerHTML = '';
