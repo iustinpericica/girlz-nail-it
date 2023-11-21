@@ -28,3 +28,19 @@ footer {
     color: #fff;
     padding: 1rem;
 }
+
+/* Style the button */
+#changeColorButton {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#changeColorButton:hover {
+    background-color: #008CBA;
+}
