@@ -1,4 +1,3 @@
-// script.js
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById('next-btn');
@@ -34,13 +33,7 @@ function checkAnswer(userAnswer) {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer;
     if (userAnswer === correctAnswer) {
         resultElement.innerText = 'Correct!';
-        var scalar = 2;
-        var pineapple = confetti.shapeFromText({ text: '💕', scalar });
-
-        confetti({
-        shapes: [pineapple],
-        scalar
-        });
+        createConfetti();
     } else {
         resultElement.innerText = 'Incorrect!';
     }
@@ -54,5 +47,18 @@ function nextQuestion() {
     } else {
         // Show final score or submit the answers to a server
         resultElement.innerText = 'Quiz completed!';
+        nextButton.style.display = 'none';
+        optionsElement.innerHTML = '';
+        questionElement.innerText = '';
     }
 }
+
+function createConfetti() {
+    const scalar = 3;
+    const pineapple = confetti.shapeFromText({ text: '💕', scalar, gravity: 0.3 });
+
+    confetti({
+    shapes: [pineapple, 'circle'],
+    scalar,
+    });
+} 
