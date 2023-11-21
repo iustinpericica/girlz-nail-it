@@ -34,6 +34,13 @@ function checkAnswer(userAnswer) {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer;
     if (userAnswer === correctAnswer) {
         resultElement.innerText = 'Correct!';
+        var scalar = 2;
+        var pineapple = confetti.shapeFromText({ text: '💕', scalar });
+
+        confetti({
+        shapes: [pineapple],
+        scalar
+        });
     } else {
         resultElement.innerText = 'Incorrect!';
     }
